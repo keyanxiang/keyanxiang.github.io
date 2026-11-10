@@ -1,15 +1,21 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
+title: Teaching
+description: Teaching assistantships.
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 3
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+## Teaching assistantships
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
+| Course                               | Level         | Instructor     | Term           |
+| ------------------------------------ | ------------- | -------------- | -------------- |
+| Econometrics                         | Undergraduate | Wei Huang      | Fall 2023–2025 |
+| Academic Writing in Economics        | Ph.D.         | Wei Huang      | Spring 2026    |
+| Management Accounting                | MBA (English) | Jalal Soroosh  | Spring 2025    |
+| Operations and Technology Management | MBA (English) | Bilal Gokpinar | Spring 2024    |
+| Asset Pricing                        | Undergraduate | Kai Yao        | Fall 2022      |
+| Behavioral Finance                   | Undergraduate | Kai Yao        | Fall 2021      |
 
-{% include courses.liquid %}
+For Econometrics, I conducted weekly recitations.
