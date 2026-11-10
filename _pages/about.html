@@ -31,7 +31,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
         --home-bg: #f4f3ef;
         --home-blue: #315c78;
         --home-text: #30383e;
-        --photo-width: 250px;
+        --photo-width: 300px;
         box-sizing: border-box;
         background: var(--home-bg);
         color: var(--home-text);
@@ -51,7 +51,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
       }
       #keyan-simple-home h1 {
         font:
-          500 34px/1.25 Arial,
+          500 40px/1.25 Arial,
           "Helvetica Neue",
           sans-serif;
         letter-spacing: 0.015em;
@@ -128,7 +128,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
           min-height: 0;
         }
         #keyan-simple-home .home-content {
-          grid-template-columns: minmax(0, 1fr) 190px;
+          grid-template-columns: minmax(0, 1fr) 220px;
           gap: 30px;
           margin-top: 45px;
         }
@@ -138,7 +138,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
       }
       @media (max-width: 520px) {
         #keyan-simple-home h1 {
-          font-size: 29px;
+          font-size: 32px;
           margin-bottom: 20px;
         }
         #keyan-simple-home nav {
@@ -152,7 +152,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
         }
         #keyan-simple-home .home-photo {
           order: -1;
-          width: 190px;
+          width: 210px;
           align-self: center;
         }
         #keyan-simple-home .home-copy {
@@ -255,6 +255,15 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
           scroll-behavior: auto;
         }
       }
+      #keyan-simple-home .welcome {
+        font-size: 18px;
+        color: var(--home-blue);
+      }
+      @media (min-width: 900px) {
+        #keyan-simple-home .home-content {
+          min-height: clamp(440px, calc(100svh - 300px), 620px);
+        }
+      }
     </style>
   </head>
   <body>
@@ -271,6 +280,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
       <main>
         <section id="home" class="home-content" aria-label="About Keyan Xiang">
           <div class="home-copy">
+            <p class="welcome">Welcome to my homepage!</p>
             <p>I am a Ph.D. candidate in Economics at the National School of Development, Peking University.</p>
             <p>
               My research interests include development economics, public economics, and health economics. I primarily focus on how external shocks
