@@ -172,35 +172,150 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
         font-size: 15px;
         line-height: 1.7;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      #keyan-simple-home .section-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--home-bg);
+        padding: 14px 0;
+        border-bottom: 1px solid #dedfdc;
+      }
+      #keyan-simple-home #home,
+      #keyan-simple-home .detail-section {
+        scroll-margin-top: 82px;
+      }
+      #keyan-simple-home .detail-section {
+        max-width: 900px;
+        margin: 72px auto 0;
+        padding-top: 24px;
+        border-top: 1px solid #cdd5d8;
+        overflow-wrap: anywhere;
+      }
+      #keyan-simple-home .detail-section h2 {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--home-blue);
+        margin: 0 0 26px;
+      }
+      #keyan-simple-home .detail-section h3 {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: var(--home-blue);
+        margin: 32px 0 18px;
+      }
+      #keyan-simple-home .detail-section p {
+        margin: 0 0 22px;
+      }
+      #keyan-simple-home .detail-section li {
+        margin-bottom: 20px;
+        padding-left: 4px;
+      }
+      #keyan-simple-home .detail-section ol,
+      #keyan-simple-home .detail-section ul {
+        padding-left: 24px;
+      }
+      #keyan-simple-home .teaching-table {
+        overflow-x: auto;
+        margin-bottom: 20px;
+      }
+      #keyan-simple-home table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 580px;
+        font-size: 14px;
+      }
+      #keyan-simple-home th,
+      #keyan-simple-home td {
+        text-align: left;
+        padding: 12px 10px;
+        border-bottom: 1px solid #dedfdc;
+        vertical-align: top;
+      }
+      #keyan-simple-home th {
+        font-weight: 600;
+        color: var(--home-blue);
+      }
+      @media (max-width: 520px) {
+        #keyan-simple-home .detail-section {
+          margin-top: 48px;
+          font-size: 15px;
+        }
+        #keyan-simple-home .detail-section h2 {
+          font-size: 23px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="keyan-simple-home">
       <header class="home-heading">
         <h1>Keyan Xiang</h1>
-        <nav aria-label="Main navigation">
-          <a href="{{ '/' | relative_url }}" aria-current="page">Home</a>
-          <a href="{{ '/publications/' | relative_url }}">Research</a>
-          <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
-          <a href="{{ '/assets/pdf/KeyanXiang_CV.pdf' | relative_url }}">CV</a>
-        </nav>
       </header>
-      <main id="keyan-introduction" class="home-content">
-        <div class="home-copy">
-          <p>I am a Ph.D. candidate in Economics at the National School of Development, Peking University.</p>
-          <p>
-            My research interests include development economics, public economics, and health economics. I primarily focus on how external shocks and
-            public policies impact household behavior, welfare, and long-run human capital formation.
-          </p>
-          <p class="job-market"><strong>I am on the academic job market for the 2026–2027 academic year.</strong></p>
-          <div class="home-contact">
-            <p>Email: <a href="mailto:kyxiang2022@nsd.pku.edu.cn">kyxiang2022@nsd.pku.edu.cn</a></p>
-            <p><a href="{{ '/assets/pdf/KeyanXiang_CV.pdf' | relative_url }}">Download CV</a></p>
+      <nav aria-label="Main navigation" class="section-nav">
+        <a href="#home" aria-current="location">Home</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#cv">CV</a>
+      </nav>
+      <main>
+        <section id="home" class="home-content" aria-label="About Keyan Xiang">
+          <div class="home-copy">
+            <p>I am a Ph.D. candidate in Economics at the National School of Development, Peking University.</p>
+            <p>
+              My research interests include development economics, public economics, and health economics. I primarily focus on how external shocks
+              and public policies impact household behavior, welfare, and long-run human capital formation.
+            </p>
+            <p class="job-market"><strong>I am on the academic job market for the 2026–2027 academic year.</strong></p>
+            <div class="home-contact">
+              <p>Email: <a href="mailto:kyxiang2022@nsd.pku.edu.cn">kyxiang2022@nsd.pku.edu.cn</a></p>
+              <p><a href="{{ '/assets/pdf/KeyanXiang_CV.pdf' | relative_url }}">Download CV</a></p>
+            </div>
           </div>
-        </div>
-        <img class="home-photo" src="{{ '/assets/img/keyan-xiang.png' | relative_url }}" width="1254" height="1254" alt="Keyan Xiang" />
+          <img class="home-photo" src="{{ '/assets/img/keyan-xiang.png' | relative_url }}" width="1254" height="1254" alt="Keyan Xiang" />
+        </section>
+        <section id="research" class="detail-section" aria-labelledby="research-title">
+          <h2 id="research-title">Research</h2>
+          {% assign research_page = site.pages | where: 'path', '_pages/publications.md' | first %} {{ research_page.content | replace: '## ', '### '
+          | markdownify }}
+        </section>
+        <section id="teaching" class="detail-section" aria-labelledby="teaching-title">
+          <h2 id="teaching-title">Teaching</h2>
+          {% assign teaching_page = site.pages | where: 'path', '_pages/teaching.md' | first %}
+          <div class="teaching-table" role="region" aria-label="Teaching assistantships" tabindex="0">
+            {{ teaching_page.content | replace: '## ', '### ' | markdownify }}
+          </div>
+        </section>
+        <section id="cv" class="detail-section" aria-labelledby="cv-title">
+          <h2 id="cv-title">CV</h2>
+          {% assign cv_page = site.pages | where: 'path', '_pages/cv.md' | first %} {{ cv_page.content | replace: '## ', '### ' | markdownify }}
+        </section>
       </main>
       <footer>© {{ 'now' | date: "%Y" }} Keyan Xiang</footer>
     </div>
+    <script>
+      (() => {
+        const links = document.querySelectorAll(".section-nav a");
+        function highlightSection() {
+          const target = location.hash || "#home";
+          links.forEach((link) => {
+            if (link.getAttribute("href") === target) link.setAttribute("aria-current", "location");
+            else link.removeAttribute("aria-current");
+          });
+        }
+        window.addEventListener("hashchange", highlightSection);
+        highlightSection();
+      })();
+    </script>
   </body>
 </html>
