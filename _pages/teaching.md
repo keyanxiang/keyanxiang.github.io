@@ -9,13 +9,11 @@ nav_order: 3
 
 ## Teaching assistantships
 
-| Course                               | Level         | Instructor     | Term           |
-| ------------------------------------ | ------------- | -------------- | -------------- |
-| Econometrics                         | Undergraduate | Wei Huang      | Fall 2023–2025 |
-| Academic Writing in Economics        | Ph.D.         | Wei Huang      | Spring 2026    |
-| Management Accounting                | MBA (English) | Jalal Soroosh  | Spring 2025    |
-| Operations and Technology Management | MBA (English) | Bilal Gokpinar | Spring 2024    |
-| Asset Pricing                        | Undergraduate | Kai Yao        | Fall 2022      |
-| Behavioral Finance                   | Undergraduate | Kai Yao        | Fall 2021      |
+<p><span class="course">Econometrics</span> (Undergraduate, PKU, Chinese) · Fall 2023–2025<br>
+<span class="recitation">Conducted weekly recitations.</span></p>
 
-For Econometrics, I conducted weekly recitations.
+<p><span class="course">Academic Writing in Economics</span> (Ph.D., PKU, Chinese) · Spring 2026</p>
+
+<p><span class="course">Management Accounting</span> (MBA, PKU–Vlerick Business School, English) · Spring 2025</p>
+
+<p><span class="course">Operations and Technology Management</span> (MBA, PKU–UCL, English) · Spring 2024</p>

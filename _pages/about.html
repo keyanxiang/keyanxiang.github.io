@@ -220,9 +220,24 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
       #keyan-simple-home .detail-section ul {
         padding-left: 24px;
       }
-      #keyan-simple-home .teaching-table {
-        overflow-x: auto;
-        margin-bottom: 20px;
+      #keyan-simple-home #teaching h3 {
+        font-size: 17px;
+        font-weight: 400;
+        margin: 28px 0 24px;
+      }
+      #keyan-simple-home #teaching p {
+        font-size: 14px;
+        line-height: 1.85;
+        color: #58656d;
+        margin: 0 0 19px;
+      }
+      #keyan-simple-home #teaching .course {
+        font-size: 15px;
+        font-weight: 500;
+        color: #2d4352;
+      }
+      #keyan-simple-home #teaching .recitation {
+        font-size: 13px;
       }
       #keyan-simple-home table {
         border-collapse: collapse;
@@ -369,9 +384,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
         <section id="teaching" class="detail-section" aria-labelledby="teaching-title">
           <h2 id="teaching-title">Teaching</h2>
           {% assign teaching_page = site.pages | where: 'path', '_pages/teaching.md' | first %}
-          <div class="teaching-table" role="region" aria-label="Teaching assistantships" tabindex="0">
-            {{ teaching_page.content | replace: '## ', '### ' | markdownify }}
-          </div>
+          <div class="teaching-courses">{{ teaching_page.content | replace: '## ', '### ' | markdownify }}</div>
         </section>
         <section id="cv" class="detail-section" aria-labelledby="cv-title">
           <h2 id="cv-title">CV</h2>
