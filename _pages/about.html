@@ -344,6 +344,35 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
           margin-bottom: 30px;
         }
       }
+
+      #keyan-simple-home #contact p {
+        font-size: 14px;
+        line-height: 1.85;
+        color: #58656d;
+        margin: 0;
+      }
+      #keyan-simple-home #contact h3 {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 42px 0 26px;
+      }
+      #keyan-simple-home .references-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 30px 48px;
+      }
+      #keyan-simple-home #contact h4 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #2d4352;
+        margin: 0 0 7px;
+        line-height: 1.5;
+      }
+      @media (max-width: 600px) {
+        #keyan-simple-home .references-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -356,6 +385,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
         <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
       </nav>
       <main>
         <section id="home" class="home-content" aria-label="About Keyan Xiang">
@@ -395,6 +425,37 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
           <p>Updated October 29, 2026. The full CV includes research projects, conferences, and presentations.</p>
           <h3>Education</h3>
           {% assign cv_sections = cv_page.content | split: '## Education' | last %} {{ cv_sections | replace: '## ', '### ' | markdownify }}
+        </section>
+        <section id="contact" class="detail-section" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>Email: <a href="mailto:kyxiang2022@nsd.pku.edu.cn">kyxiang2022@nsd.pku.edu.cn</a></p>
+          <h3>References</h3>
+          <div class="references-grid">
+            <section aria-label="Wei Huang">
+              <h4>Wei Huang</h4>
+              <p>
+                Professor<br />National School of Development, Peking University<br /><a href="mailto:huangwei@pku.edu.cn">huangwei@pku.edu.cn</a>
+              </p>
+            </section>
+            <section aria-label="Xiaoyan Lei">
+              <h4>Xiaoyan Lei</h4>
+              <p>
+                Professor<br />National School of Development, Peking University<br /><a href="mailto:xylei@nsd.pku.edu.cn">xylei@nsd.pku.edu.cn</a>
+              </p>
+            </section>
+            <section aria-label="Jin Feng">
+              <h4>Jin Feng</h4>
+              <p>Professor<br />School of Economics, Fudan University<br /><a href="mailto:jfeng@fudan.edu.cn">jfeng@fudan.edu.cn</a></p>
+            </section>
+            <section aria-label="Lintong Li">
+              <h4>Lintong Li</h4>
+              <p>
+                Assistant Professor<br />National School of Development, Peking University<br /><a href="mailto:lintongl@nsd.pku.edu.cn"
+                  >lintongl@nsd.pku.edu.cn</a
+                >
+              </p>
+            </section>
+          </div>
         </section>
       </main>
       <footer>© {{ 'now' | date: "%Y" }} Keyan Xiang</footer>
