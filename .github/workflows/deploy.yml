@@ -62,6 +62,8 @@ permissions:
 
 jobs:
   deploy:
+    # Temporarily offline at the owner's request. Remove this condition to resume publishing.
+    if: ${{ false }}
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
