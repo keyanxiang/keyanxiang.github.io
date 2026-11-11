@@ -20,8 +20,6 @@ nav_order: 3
 
 ## Teaching Development
 
-{: style="margin-top: 42px;" }
-
 <p><span class="course">AI-Empowered Econometrics Education: Undergraduate Training Across the Research Cycle</span><br>
 Peking University Undergraduate Teaching Reform Project, 2025<br>
 Role: Research Team Member</p>
