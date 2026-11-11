@@ -34,8 +34,3 @@ Journal of Economic Behavior & Organization; China Economic Review; Economics of
 
 **Conference service**  
 Submission reviewer and conference volunteer: China Annual Conference of Economics (2024), National Development Youth Forum (2023–2026), and CCER Summer Institute (2023–2025).
-
-## Contact
-
-[kyxiang2022@nsd.pku.edu.cn](mailto:kyxiang2022@nsd.pku.edu.cn)  
-National School of Development, Peking University
