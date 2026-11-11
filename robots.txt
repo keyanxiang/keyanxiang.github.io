@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://keyanxiang.github.io/sitemap.xml
