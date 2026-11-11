@@ -462,7 +462,6 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
           <p>
             <a href="{{ '/assets/pdf/KeyanXiang_CV.pdf' | relative_url }}"><strong>Download full CV (PDF)</strong></a>
           </p>
-          <p>Updated October 29, 2026. The full CV includes research projects, conferences, and presentations.</p>
           <h3>Education</h3>
           {% assign cv_sections = cv_page.content | split: '## Education' | last %} {{ cv_sections | replace: '## ', '### ' | markdownify }}
         </section>
