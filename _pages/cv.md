@@ -28,7 +28,7 @@ B.A. in Economics · September 2018–June 2022
 
 ## Conferences and Presentations
 
-- **2026** — China Health Economics Forum (JNU); Graduate Forum on Social Security (SUFE, First Prize); China Economics Annual Conference (BNU); Chinese Economists Society Annual Conference (SWUFE); Annual Conference of the China Population Association (ZUEL).
+- **2026** — China Association of Labor Science Annual Conference (CUEB, **Third Prize**); China Health Economics Forum (JNU); Graduate Forum on Social Security (SUFE, First Prize); China Economics Annual Conference (BNU); Chinese Economists Society Annual Conference (SWUFE); Annual Conference of the China Population Association (ZUEL).
 - **2025** — International Symposium on Contemporary Labor Economics (XMU); China Young Economists Forum (SWUFE); Xiangzhang Economics English Forum (GDUFS); YES Guangzhou Forum (SCNU).
 - **2021** — National Development Youth Forum (PKU, First Prize); Annual Conference of Labor Economics (SCU).
 
