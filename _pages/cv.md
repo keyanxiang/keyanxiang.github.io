@@ -35,7 +35,7 @@ B.A. in Economics · September 2018–June 2022
 ## Academic and professional service
 
 **Referee service**  
-_Journal of Economic Behavior & Organization_; _China Economic Review_; _Economics of Transition and Institutional Change_; _Journal of Asian Economics_; _《经济学（季刊）》_; _《世界经济》_.
+_Journal of Economic Behavior & Organization_; _Journal of Happiness Studies_; _China Economic Review_; _Economics of Transition and Institutional Change_; _Journal of Asian Economics_; _《经济学（季刊）》_; _《世界经济》_.
 
 **Conference service**  
 Submission reviewer and conference volunteer: China Annual Conference of Economics (2024), National Development Youth Forum (2023–2026), and CCER Summer Institute (2023–2025).
