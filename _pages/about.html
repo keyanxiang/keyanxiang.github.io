@@ -25,7 +25,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
   </head>
   <body>
     <div id="keyan-simple-home">
-      <header class="home-heading">
+      <header id="home" class="home-heading">
         <h1>Keyan Xiang</h1>
       </header>
       <nav aria-label="Main navigation" class="section-nav">
@@ -36,7 +36,7 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
         <a href="#cv">CV</a>
       </nav>
       <main>
-        <section id="home" class="home-content" aria-label="About Keyan Xiang">
+        <section class="home-content" aria-label="About Keyan Xiang">
           <div class="home-copy">
             <p class="welcome">Welcome to my homepage!</p>
             <p class="bio">
@@ -109,16 +109,32 @@ description: Keyan Xiang, Ph.D. candidate in Economics at Peking University. Dev
     </div>
     <script>
       (() => {
-        const links = document.querySelectorAll(".section-nav a");
+        const nav = document.querySelector(".section-nav");
+        const links = [...nav.querySelectorAll('a[href^="#"]')];
+        const sections = links.map((link) => document.getElementById(link.hash.slice(1)));
+        const homeContent = document.querySelector(".home-content");
+        const root = document.getElementById("keyan-simple-home");
+
         function highlightSection() {
-          const target = location.hash || "#home";
-          links.forEach((link) => {
-            if (link.getAttribute("href") === target) link.setAttribute("aria-current", "location");
+          const active = sections.findLastIndex((section) => section.getBoundingClientRect().top <= nav.offsetHeight + 2);
+          links.forEach((link, index) => {
+            if (index === Math.max(0, active)) link.setAttribute("aria-current", "location");
             else link.removeAttribute("aria-current");
           });
         }
-        window.addEventListener("hashchange", highlightSection);
-        highlightSection();
+
+        function updateSectionSizes() {
+          root.style.setProperty("--nav-height", nav.offsetHeight + "px");
+          root.style.setProperty("--home-start", homeContent.getBoundingClientRect().top + window.scrollY + "px");
+          highlightSection();
+        }
+
+        const layoutObserver = new ResizeObserver(updateSectionSizes);
+        layoutObserver.observe(nav);
+        layoutObserver.observe(sections[0]);
+        window.addEventListener("resize", updateSectionSizes);
+        window.addEventListener("scroll", highlightSection, { passive: true });
+        updateSectionSizes();
       })();
     </script>
   </body>
