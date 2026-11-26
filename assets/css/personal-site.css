@@ -18,7 +18,8 @@ body {
     "Helvetica Neue",
     sans-serif;
   color-scheme: light;
-  padding: 56px 7% 22px;
+  --home-top-padding: 56px;
+  padding: var(--home-top-padding) 7% 22px;
   min-height: 620px;
 }
 #keyan-simple-home * {
@@ -26,6 +27,8 @@ body {
 }
 #keyan-simple-home .home-heading {
   text-align: center;
+  scroll-snap-align: start;
+  scroll-margin-top: var(--home-top-padding);
 }
 #keyan-simple-home h1 {
   font:
@@ -71,6 +74,8 @@ body {
   align-items: start;
   max-width: 900px;
   margin: 64px auto 0;
+  min-height: calc(100dvh - var(--home-start, 250px));
+  padding-bottom: 48px;
 }
 #keyan-simple-home .home-copy p {
   margin: 0 0 23px;
@@ -103,7 +108,7 @@ body {
 @media (max-width: 720px) {
   #keyan-simple-home {
     padding: 38px 7% 20px;
-    min-height: 0;
+    --home-top-padding: 38px;
   }
   #keyan-simple-home .home-content {
     grid-template-columns: minmax(0, 1fr) 220px;
@@ -152,6 +157,7 @@ body {
 }
 
 html {
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 #keyan-simple-home .section-nav {
@@ -162,14 +168,13 @@ html {
   padding: 14px 0;
   border-bottom: 1px solid #dedfdc;
 }
-#keyan-simple-home #home,
-#keyan-simple-home .detail-section {
-  scroll-margin-top: 82px;
-}
 #keyan-simple-home .detail-section {
   max-width: 900px;
-  margin: 72px auto 0;
-  padding-top: 24px;
+  margin: 0 auto;
+  padding: 24px 0 48px;
+  min-height: calc(100dvh - var(--nav-height, 64px));
+  scroll-margin-top: var(--nav-height, 64px);
+  scroll-snap-align: start;
   border-top: 1px solid #cdd5d8;
   overflow-wrap: anywhere;
 }
@@ -239,7 +244,6 @@ html {
 }
 @media (max-width: 520px) {
   #keyan-simple-home .detail-section {
-    margin-top: 48px;
     font-size: 15px;
   }
   #keyan-simple-home .detail-section h2 {
@@ -249,16 +253,12 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+    scroll-snap-type: none;
   }
 }
 #keyan-simple-home .welcome {
   font-size: 18px;
   color: var(--home-blue);
-}
-@media (min-width: 900px) {
-  #keyan-simple-home .home-content {
-    min-height: clamp(440px, calc(100svh - 300px), 620px);
-  }
 }
 
 #keyan-simple-home .home-copy {
@@ -352,17 +352,5 @@ html {
 @media (max-width: 600px) {
   #keyan-simple-home .references-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-}
-@media (min-width: 900px) {
-  #keyan-simple-home #teaching,
-  #keyan-simple-home #contact {
-    min-height: calc(100svh - 82px);
-  }
-}
-@media (max-width: 520px) {
-  #keyan-simple-home #home,
-  #keyan-simple-home .detail-section {
-    scroll-margin-top: 128px;
   }
 }
